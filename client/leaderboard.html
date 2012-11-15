@@ -7,31 +7,43 @@
     <div class="row">
       <div class="span12">.
         <h1>Leaderboard</h1>
+        <hr>
         {{> leaderboard}}
       </div>
     </div>    
-    <div class="row">
-      <div class="span12">.
-        <div class="input-append">
-          <input type="text" placeholder="New player name"> 
-          <button class="btn btn-primary" type="button">Add player</button>
-        </div>
-      </div>
-    </div>   
+    <hr>
 
+    {{> newPlayer}}
     
   </div>
 </body>
 
-<template name="leaderboard">
-  <h3>Top players</h3>
+<template name="newPlayer">
+  <div class="row">
+    <div class="span12">.
+      <div class="input-append">
+        <input type="text" placeholder="New player name" id="newPlayerName"> 
+        <button class="btn btn-primary" type="button">Add player</button>
+      </div>
+    </div>
+  </div>   
+</template>
 
+<template name="leaderboard">
   <table class="table table-striped">
     <thead>
       <tr>
         <th width="10%"></th>
-        <th width="45%">Name</th>
-        <th width="45%">Score</th>
+        <th width="45%">
+          <button class="btn" type="button" id="nameSort">
+            <i></i> Name
+          </button>          
+        </th>
+        <th width="45%">
+          <button class="btn" type="button" id="scoreSort">
+            <i></i> Score
+          </button>              
+        </th>
       </tr>
     </thead>
     <tbody>
