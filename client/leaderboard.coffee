@@ -17,7 +17,7 @@ unless Session.get("currentSortOrder")?
 # sort buttons before they are loaded. In a way, this works like jQuery's 
 # startup function, but Meteor will wait until the DOM is ready and any <body> 
 # templates from your .html files have been put on the screen.
-Meteor startup ->
+Meteor.startup ->
 	Meteor.autorun ->
 		for field in sortFields		
 			$("##{field}Sort i:first-child")
