@@ -1,30 +1,34 @@
 <head>
-  <title>Leaderboard</title>
+  <title>Leaderboard XL</title>
 </head>
 
 <body>
   <div class="container">
     <div class="row">
       <div class="span12">.
-        <h1>Leaderboard</h1>
+        <h1>Leaderboard XL</h1>
+        The original Meteor leaderboards example with a button to add new players as well as sort functionality.<br>Made with Coffeescript and Bootstrap. Source code can be obtained at <a href="https://github.com/nickjanssen/Leaderboards-XL">GitHub</a>.
         <hr>
         {{> leaderboard}}
       </div>
     </div>    
     <hr>
 
-    {{> newPlayer}}
+    {{> lbActions}}
     
   </div>
 </body>
 
-<template name="newPlayer">
+<template name="lbActions">
   <div class="row">
-    <div class="span12">.
+    <div class="span8">
       <div class="input-append">
         <input type="text" placeholder="New player name" id="newPlayerName"> 
-        <button class="btn btn-primary" type="button">Add player</button>
+        <button class="btn btn-primary" type="button" id="addPlayer">Add player</button>
       </div>
+    </div>
+    <div class="span4" style="text-align:right">      
+        <button class="btn" type="button" id="resetTable">Reset table</button>      
     </div>
   </div>   
 </template>
